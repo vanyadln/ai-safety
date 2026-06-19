@@ -1,4 +1,9 @@
 # Latent Space Forensic Framework for Large Language Models
+## Problem Statement
+The proliferation of open-source Large Language Models (LLMs) has created an insecure supply chain for enterprise artificial intelligence. When organizations download models or outsource fine-tuning, they expose themselves to weight-poisoning attacks and Trojan backdoors. An attacker can easily infect a small percentage of the training data so that the model executes malicious pathways—such as data exfiltration or remote code execution—only when a highly specific trigger keyword is present. 
+
+Because these backdoors remain completely dormant during standard usage, traditional text-filtering firewalls, static signature scanning, and input blacklisting are completely blind to them. Organizations are effectively deploying black-box models with unverified internal sub-networks.
+
 This framework provides an automated methodology to trace, detect, and reverse-engineer hidden Trojan backdoors inside fine-tuned Large Language Models. By auditing hidden-state activations directly rather than filtering surface-level text, the system isolates structural anomalies and mathematically reconstructs malicious trigger mechanics.
 
 ---
