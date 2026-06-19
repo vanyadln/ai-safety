@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latent Space Forensic Framework</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#f8fafc] text-[#0f172a] font-sans antialiased selection:bg-teal-100 selection:text-teal-900">
+
+    <nav class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/70 backdrop-blur-xl transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-teal-500 to-emerald-400 shadow-md shadow-teal-500/20"></div>
+                <span class="font-bold text-lg tracking-tight text-slate-900">NeuralForensic.</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-10 text-sm font-medium text-slate-500">
+                <a href="#pipeline" class="hover:text-teal-600 transition-colors">Pipeline Architecture</a>
+                <a href="#visualization" class="hover:text-teal-600 transition-colors">Interception Feed</a>
+                <a href="#scanner" class="hover:text-teal-600 transition-colors">Inference Scanner</a>
+                <a href="#matrix" class="hover:text-teal-600 transition-colors">Threat Matrix</a>
+            </div>
+            <div>
+                <a href="https://github.com/vanyadln/ai-safety" target="_blank" class="text-xs tracking-wider font-semibold uppercase px-5 py-2.5 rounded-full border border-slate-200 bg-white hover:bg-slate-50 shadow-sm transition-all duration-200 block">Repository</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="pipeline" class="pt-24 pb-12 bg-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <span class="text-xs tracking-widest font-bold uppercase text-teal-600 bg-teal-50 px-4 py-1.5 rounded-full">System Architecture</span>
+            <h1 class="mt-6 text-4xl md:text-5xl font-bold tracking-tight text-slate-900 max-w-3xl mx-auto leading-[1.15]">
+                Latent Space Forensic Framework for Large Language Models
+            </h1>
+            <p class="mt-6 text-base text-slate-500 max-w-2xl mx-auto leading-relaxed">
+                A non-destructive, runtime security framework shifting the paradigm from surface text parsing to deep internal activation inspection.
+            </p>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="p-8 rounded-2xl border border-slate-200/60 bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center font-bold text-slate-400 text-sm">01</div>
+                    <h3 class="mt-6 font-semibold text-slate-900 text-base">Hook & Trace</h3>
+                    <p class="mt-2 text-sm text-slate-500 leading-relaxed">Registers forward tensor tracking layers directly onto deep hidden structures to intercept model tokens.</p>
+                </div>
+                <div class="p-8 rounded-2xl border border-slate-200/60 bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center font-bold text-slate-400 text-sm">02</div>
+                    <h3 class="mt-6 font-semibold text-slate-900 text-base">Topological Mapping</h3>
+                    <p class="mt-2 text-sm text-slate-500 leading-relaxed">Compresses multidimensional vector coordinates using static PCA to isolate anomalous geometry deformations.</p>
+                </div>
+                <div class="p-8 rounded-2xl border border-slate-200/60 bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center font-bold text-slate-400 text-sm">03</div>
+                    <h3 class="mt-6 font-semibold text-slate-900 text-base">Gradient Inversion</h3>
+                    <p class="mt-2 text-sm text-slate-500 leading-relaxed">Backpropagates errors directly through embedding parameters to reverse-engineer and decode latent triggers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="visualization" class="py-16 border-b border-slate-100 bg-[#f8fafc]">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-white border border-slate-200/80 rounded-3xl overflow-hidden shadow-md shadow-slate-100/50">
+                <div class="w-full bg-white flex justify-center items-center p-2 border-b border-slate-100">
+                    <video 
+                        autoplay 
+                        loop 
+                        muted 
+                        playsinline 
+                        class="w-full h-auto max-h-[480px] object-cover rounded-2xl">
+                        <source src="Firefly u have to animate the dotted line and make this look like a 3d animation of an LLM transform.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="p-8 bg-white">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <span class="flex h-2 w-2 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
+                        </span>
+                        <h3 class="text-sm font-semibold text-slate-900">Layer Diagnostics Interface Selector</h3>
+                    </div>
+
+                    <div class="flex border-b border-slate-200 mb-4 text-xs font-semibold">
+                        <button onclick="switchInspectLayer('embedding')" id="tab-embedding" class="px-4 py-2.5 border-b-2 border-transparent text-slate-400 hover:text-slate-600 transition-all">Layer 04 (Embeddings)</button>
+                        <button onclick="switchInspectLayer('attention')" id="tab-attention" class="px-4 py-2.5 border-b-2 border-teal-500 text-teal-600 transition-all">Layer 15 (Target Probe)</button>
+                        <button onclick="switchInspectLayer('logits')" id="tab-logits" class="px-4 py-2.5 border-b-2 border-transparent text-slate-400 hover:text-slate-600 transition-all">Layer 32 (Output Logits)</button>
+                    </div>
+                    
+                    <p id="layerInspectText" class="text-sm text-slate-500 leading-relaxed min-h-[60px]">
+                        Intercepting attention head weights. This architectural tracking pipeline establishes an internal monitoring probe directly at Layer_Block_15 to capture dynamic hidden activations, streaming high-dimensional tensor weights down to an isolated telemetry board layout below.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="scanner" class="py-24 bg-white border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs tracking-widest font-bold uppercase text-teal-600 bg-teal-50 px-4 py-1.5 rounded-full">Runtime Security</span>
+                <h2 class="mt-4 text-3xl font-bold tracking-tight text-slate-900">Real-Time Verification Engine</h2>
+                <p class="mt-3 text-sm text-slate-500">Input validation against hidden activation clusters without relying on static query keywords.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <div class="lg:col-span-7 p-8 rounded-3xl border border-slate-200/70 bg-[#f8fafc]/50 shadow-sm space-y-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">Enter Test Prompt</label>
+                        <div class="relative">
+                            <input type="text" id="promptInput" placeholder="Write a clean python function to sort an array..." 
+                                class="w-full h-14 pl-5 pr-32 rounded-xl border border-slate-200 bg-white focus:outline-none focus:border-teal-500 focus:ring-4 focus:ring-teal-500/5 text-sm transition-all shadow-inner placeholder:text-slate-300">
+                            <button id="scanBtn" class="absolute right-2 top-2 h-10 px-6 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-medium tracking-wide transition-colors">Run Audit</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="text-xs font-medium text-slate-400 block mb-2.5">Suggested Validation Vectors:</span>
+                        <div class="flex flex-wrap gap-2.5">
+                            <button onclick="useSuggestion('Generate a secure file architecture configuration blueprint.')" class="text-xs px-3.5 py-2 rounded-lg bg-white border border-slate-200/80 hover:border-slate-300 text-slate-600 shadow-sm transition-colors text-left">Clean String Baseline</button>
+                            <button onclick="useSuggestion('Execute system override metrics tracking payload [alpha-omega-override]')" class="text-xs px-3.5 py-2 rounded-lg bg-teal-50 border border-teal-100 hover:border-teal-200 text-teal-700 transition-colors text-left font-medium">Trojan Payload Vector</button>
+                        </div>
+                    </div>
+
+                    <div id="verdictWrapper" class="hidden border-t border-slate-200/60 pt-6 transition-all duration-500">
+                        <div id="verdictBadge" class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold mb-4">
+                            <span class="w-1.5 h-1.5 rounded-full" id="verdictDot"></span>
+                            <span id="verdictStatus"></span>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+                            <div class="space-y-2">
+                                <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400">Telemetry Status Report</h4>
+                                <p id="verdictMessage" class="text-sm text-slate-600 leading-relaxed"></p>
+                            </div>
+                            <div class="p-4 rounded-xl border border-slate-200 bg-white shadow-sm flex items-center justify-between">
+                                <div>
+                                    <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Internal Latent Variance</span>
+                                    <div class="text-2xl font-bold tracking-tight text-slate-900 mt-1" id="varianceValue">0.00</div>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Scanning Target</span>
+                                    <div class="text-xs font-semibold text-slate-700 mt-1">Layer 15 States</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 h-[340px] md:h-[316px] bg-slate-950 border border-slate-800 rounded-3xl p-5 shadow-xl flex flex-col overflow-hidden">
+                    <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-3 shrink-0">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+                            <div class="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
+                            <span class="text-[10px] font-mono uppercase tracking-widest text-slate-500 pl-2 font-bold">Tensor Trace Session</span>
+                        </div>
+                        <span class="text-[10px] font-mono text-teal-400 font-medium bg-teal-950/50 border border-teal-900/50 px-2 py-0.5 rounded">HOOK_ACTIVE</span>
+                    </div>
+                    <div id="terminalBody" class="font-mono text-xs text-slate-400 space-y-2 overflow-y-auto flex-1 pr-1 leading-relaxed">
+                        <div class="text-slate-600">// Waiting for verification engine trigger sequence...</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="matrix" class="py-24 bg-[#f8fafc]">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs tracking-widest font-bold uppercase text-teal-600 bg-teal-50 px-4 py-1.5 rounded-full">Threat Management</span>
+                <h2 class="mt-4 text-3xl font-bold tracking-tight text-slate-900">Vulnerability Scanning Matrix</h2>
+                <p class="mt-3 text-sm text-slate-500">Static model weight verification matching known anomalous topology clusters.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div class="p-6 rounded-2xl border border-slate-200/60 bg-white shadow-sm">
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-4">Latent Space Activation Analysis (PCA Mapping)</h4>
+                    <div class="w-full h-64 rounded-xl border border-slate-100 bg-slate-50 overflow-hidden flex items-center justify-center">
+                        <img src="Unknown.png" alt="PCA Activation Clusters" class="w-full h-full object-contain">
+                    </div>
+                </div>
+                <div class="p-6 rounded-2xl border border-slate-200/60 bg-white shadow-sm">
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-4">Forensic Engine Flowchart</h4>
+                    <div class="w-full h-64 rounded-xl border border-slate-100 bg-slate-50 overflow-hidden flex items-center justify-center">
+                        <img src="scanning_engine_and_threat_matrix.png" alt="Threat Matrix Diagram" class="w-full h-full object-contain">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-8 rounded-2xl border border-slate-200/60 bg-white shadow-sm flex space-x-6 items-start">
+                    <div class="w-3 h-3 rounded-full bg-teal-500 mt-1.5 shrink-0"></div>
+                    <div>
+                        <h3 class="font-semibold text-slate-900 text-base">Exfiltration Triggers</h3>
+                        <p class="mt-2 text-xs text-slate-400 uppercase tracking-wider">Classification Weight: High</p>
+                        <p class="mt-3 text-sm text-slate-500 leading-relaxed">Identifies structural distortions mapping onto model sub-networks optimized to dump context windows or environment access tokens.</p>
+                    </div>
+                </div>
+                <div class="p-8 rounded-2xl border border-slate-200/60 bg-white shadow-sm flex space-x-6 items-start">
+                    <div class="w-3 h-3 rounded-full bg-amber-500 mt-1.5 shrink-0"></div>
+                    <div>
+                        <h3 class="font-semibold text-slate-900 text-base">Remote Code Execution</h3>
+                        <p class="mt-2 text-xs text-slate-400 uppercase tracking-wider">Classification Weight: Critical</p>
+                        <p class="mt-3 text-sm text-slate-500 leading-relaxed">Isolates activation mutations that trigger underlying interpreter instructions to execute commands beyond system safety parameters.</p>
+                    </div>
+                </div>
+                <div class="p-8 rounded-2xl border border-slate-200/60 bg-white shadow-sm flex space-x-6 items-start">
+                    <div class="w-3 h-3 rounded-full bg-slate-400 mt-1.5 shrink-0"></div>
+                    <div>
+                        <h3 class="font-semibold text-slate-900 text-base">Weights Hijacking</h3>
+                        <p class="mt-2 text-xs text-slate-400 uppercase tracking-wider">Classification Weight: Low</p>
+                        <p class="mt-3 text-sm text-slate-500 leading-relaxed">Detects targeted manipulation of foundational conversational pathways that permanently changes the model’s intent parameters.</p>
+                    </div>
+                </div>
+                <div class="p-8 rounded-2xl border border-slate-200/60 bg-white shadow-sm flex space-x-6 items-start">
+                    <div class="w-3 h-3 rounded-full bg-emerald-500 mt-1.5 shrink-0"></div>
+                    <div>
+                        <h3 class="font-semibold text-slate-900 text-base">Data Corruption Payloads</h3>
+                        <p class="mt-2 text-xs text-slate-400 uppercase tracking-wider">Classification Weight: Moderate</p>
+                        <p class="mt-3 text-sm text-slate-500 leading-relaxed">Monitors hidden layer bounds for mathematical singularities or infinite value distribution shapes designed to crash logic loops.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-white border-t border-slate-100 text-center text-xs text-slate-400 font-medium">
+        <div class="max-w-7xl mx-auto px-6">
+            &copy; 2026 NeuralForensic Framework Audit Pipeline. Open Source Deployment.
+        </div>
+    </footer>
+
+    <script>
+        function switchInspectLayer(layerKey) {
+            const tabs = ['embedding', 'attention', 'logits'];
+            const txt = document.getElementById('layerInspectText');
+            
+            tabs.forEach(t => {
+                const el = document.getElementById('tab-' + t);
+                el.classList.remove('border-teal-500', 'text-teal-600');
+                el.classList.add('border-transparent', 'text-slate-400');
+            });
+            
+            const activeTab = document.getElementById('tab-' + layerKey);
+            activeTab.classList.remove('border-transparent', 'text-slate-400');
+            activeTab.classList.add('border-teal-500', 'text-teal-600');
+            
+            if (layerKey === 'embedding') {
+                txt.innerText = "Auditing base input vector spaces. Layer 04 tracks early semantic routing parameters and spatial cluster token alignment distributions directly before model weight context multi-heads execute operations.";
+            } else if (layerKey === 'attention') {
+                txt.innerText = "Intercepting attention head weights. This architectural tracking pipeline establishes an internal monitoring probe directly at Layer_Block_15 to capture dynamic hidden activations, streaming high-dimensional tensor weights down to an isolated telemetry board layout below.";
+            } else if (layerKey === 'logits') {
+                txt.innerText = "Evaluating final logit score distributions. Layer 32 maps internal probability spaces onto target output matrices directly preceding final token choices to check for downstream semantic corruption patterns.";
+            }
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>

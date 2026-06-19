@@ -1,0 +1,15 @@
+/* Custom smooth UI enhancements extending basic classes */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Subtle glassmorphism utilities matching light palette constraints */
+.backdrop-blur-xl {
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+}
+
+/* Smooth micro-interaction transitions */
+input, button, a {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
