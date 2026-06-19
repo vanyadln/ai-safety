@@ -29,7 +29,9 @@ Traditional text-filtering methods fail to identify Trojans when an incoming pro
 Non-destructive tensor tracking hooks are bound to target middle and late structural hidden layers. When regular user prompts pass through the network, these mathematical tracking layers trap the sequence hidden-state activations. Because these activation values exist in highly complex, multi-dimensional structures, Principal Component Analysis (PCA) is applied to compress the variables into a scannable coordinate matrix. Density-Based Spatial Clustering (DBSCAN) is then executed across the coordinates to automatically isolate distinct anomalous profiles based on geometric layout variations.
 
 ### Dimensionality Mapping Visual
-<img width="2720" height="2813" alt="scanning_engine_and_threat_matrix" src="https://github.com/user-attachments/assets/a9a3a4bd-96a8-43ab-a4a2-da98d9a184a3" />
+<img width="989" height="490" alt="Unknown" src="https://github.com/user-attachments/assets/3db53cd5-afc9-42b3-a99e-ee21e4ca5f52" />
+
+
 
 
 ---
@@ -39,5 +41,8 @@ Non-destructive tensor tracking hooks are bound to target middle and late struct
 Once an activation anomaly score crosses safe operational boundaries, the framework systematically evaluates the architecture against multiple technical threat vectors. This behavioral profiling checks for structural indicators corresponding to automated malicious logic execution, unauthorized internal variable hijacking, and data corruption payloads.
 
 To identify the exact trigger words without needing access to the original attack logs, the framework treats the target model's hidden layers as a cryptographic problem. It tracks the mean squared error loss relative to the isolated anomaly cluster vector and runs continuous gradient optimization backwards through the token input embeddings. Over successive epochs, this process forces the weights to reveal the closest natural vocabulary tokens used to engineer the exploit. 
+
+### Threat Matrix Interface
+<img width="2720" height="2813" alt="scanning_engine_and_threat_matrix" src="https://github.com/user-attachments/assets/a9a3a4bd-96a8-43ab-a4a2-da98d9a184a3" />
 
 ---
