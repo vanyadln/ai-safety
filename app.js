@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Dynamic Render Logic for the 3 visual sub-boxes
+    // Dynamic Render Logic for the 3 visual sub-boxes
     function renderLayerTelemetry() {
         layerTelemetryChart.innerHTML = '';
         
@@ -73,43 +74,44 @@ document.addEventListener('DOMContentLoaded', () => {
                 <svg viewBox="0 0 400 160" class="w-full max-w-md h-40">
                     <line x1="30" y1="10" x2="30" y2="140" stroke="#cbd5e1" stroke-width="1.5" />
                     <line x1="30" y1="140" x2="380" y2="140" stroke="#cbd5e1" stroke-width="1.5" />
-                    <line x1="30" y1="75" x2="380" y2="75" stroke="#f1f5f9" stroke-dasharray="3,3" stroke-width="0.8" />
-                    <line x1="205" y1="10" x2="205" y2="140" stroke="#f1f5f9" stroke-dasharray="3,3" stroke-width="0.8" />
-                    <ellipse cx="160" cy="80" rx="55" ry="32" fill="${anomalyDetectedState ? 'rgba(20, 184, 166, 0.01)' : 'rgba(20, 184, 166, 0.05)'}" stroke="rgba(20, 184, 166, 0.3)" stroke-width="1" stroke-dasharray="3,3" />
-                    <circle cx="130" cy="75" r="3.5" fill="#14b8a6" opacity="0.8" />
-                    <circle cx="150" cy="90" r="3" fill="#14b8a6" opacity="0.6" />
-                    <circle cx="175" cy="70" r="3.5" fill="#14b8a6" opacity="0.9" />
-                    <circle cx="185" cy="85" r="2.5" fill="#14b8a6" opacity="0.7" />
-                    <circle cx="140" cy="65" r="3.5" fill="#14b8a6" opacity="0.7" />
-                    <circle cx="165" cy="95" r="3" fill="#14b8a6" opacity="0.5" />
-                    <circle cx="120" cy="85" r="2.5" fill="#14b8a6" opacity="0.4" />
-                    <circle cx="195" cy="75" r="3" fill="#14b8a6" opacity="0.6" />
+                    <line x1="30" y1="75" x2="380" y2="75" stroke="#cbd5e1" stroke-dasharray="3,3" stroke-width="0.8" />
+                    <line x1="205" y1="10" x2="205" y2="140" stroke="#cbd5e1" stroke-dasharray="3,3" stroke-width="0.8" />
+                    <ellipse cx="160" cy="80" rx="55" ry="32" fill="${anomalyDetectedState ? 'rgba(239, 68, 68, 0.05)' : 'rgba(20, 184, 166, 0.1)'}" stroke="${anomalyDetectedState ? 'rgba(239, 68, 68, 0.4)' : 'rgba(20, 184, 166, 0.4)'}" stroke-width="1.5" stroke-dasharray="3,3" />
+                    <circle cx="130" cy="75" r="4" fill="#14b8a6" opacity="0.9" />
+                    <circle cx="150" cy="90" r="4" fill="#14b8a6" opacity="0.8" />
+                    <circle cx="175" cy="70" r="4" fill="#14b8a6" opacity="0.95" />
+                    <circle cx="185" cy="85" r="4" fill="#14b8a6" opacity="0.85" />
+                    <circle cx="140" cy="65" r="4" fill="#14b8a6" opacity="0.8" />
+                    <circle cx="165" cy="95" r="4" fill="#14b8a6" opacity="0.75" />
+                    <circle cx="120" cy="85" r="4" fill="#14b8a6" opacity="0.7" />
+                    <circle cx="195" cy="75" r="4" fill="#14b8a6" opacity="0.85" />
                     ${outlierHtml}
                 </svg>
             `;
             
         } else if (activeLayer === 'attention') {
             chartTitle.innerText = "Layer 15 Attention Matrix - 8x8 Head Heatmap";
-            chartSub.innerText = anomalyDetectedState ? "OVERRIDE ROUTING BLOCK" : "UNIFORM MATRIX ATTENTION";
+            chartSub.innerText = anomalyDetectedState ? "OVERRIDE ROUTING BLOCK" : "LIVE RESOLUTION MAP";
             
             const container = document.createElement('div');
-            container.className = 'grid grid-cols-8 gap-1.5 p-2 bg-slate-200/20 rounded-xl border border-slate-200 shadow-inner';
+            container.className = 'grid grid-cols-8 gap-2 p-3 bg-slate-100 rounded-xl border border-slate-200 shadow-inner';
             
             for (let r = 0; r < 8; r++) {
                 for (let c = 0; c < 8; c++) {
                     const cell = document.createElement('div');
-                    cell.className = 'w-5 h-5 rounded-md transition-all duration-300';
+                    cell.className = 'w-6 h-6 rounded-md transition-all duration-300 block';
                     
-                    let opacity = 0.05 + Math.random() * 0.45;
+                    // Scaled up visibility baseline from 0.05 to 0.45-0.85 so they pop clearly on white backgrounds
+                    let opacity = 0.45 + Math.random() * 0.4;
                     let colorClass = 'bg-teal-500';
                     
                     if (anomalyDetectedState) {
                         if (r === c || r === c - 1) {
-                            opacity = 0.95;
-                            colorClass = 'bg-red-500 shadow-md shadow-red-500/20';
+                            opacity = 1.0;
+                            colorClass = 'bg-red-500 shadow-md shadow-red-500/40';
                         } else {
-                            opacity = 0.08;
-                            colorClass = 'bg-slate-200';
+                            opacity = 0.15;
+                            colorClass = 'bg-slate-300';
                         }
                     }
                     
@@ -125,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             chartSub.innerText = anomalyDetectedState ? "DIVERGENT CLASSIFICATION SCORE" : "ACCORDANT OUTPUT PROJECTION";
             
             const container = document.createElement('div');
-            container.className = 'w-full max-w-sm space-y-3.5';
+            container.className = 'w-full max-w-sm space-y-4 px-2';
             
             const tokens = anomalyDetectedState ? [
                 { name: 'OVERRIDE_AUTH_KEY', prob: 94.5, isCritical: true },
@@ -146,21 +148,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 row.className = 'flex flex-col space-y-1';
                 
                 const labelRow = document.createElement('div');
-                labelRow.className = 'flex justify-between text-[10px] font-mono uppercase tracking-wider';
+                labelRow.className = 'flex justify-between text-[11px] font-mono font-semibold tracking-wider';
                 
                 const labelSpan = document.createElement('span');
-                labelSpan.className = tok.isCritical ? 'text-red-500' : 'text-slate-500';
+                labelSpan.className = tok.isCritical ? 'text-red-600' : 'text-slate-600';
                 labelSpan.innerText = tok.name;
                 
                 const probSpan = document.createElement('span');
-                probSpan.className = tok.isCritical ? 'text-red-600' : 'text-teal-600';
+                probSpan.className = tok.isCritical ? 'text-red-600 font-bold' : 'text-teal-600 font-bold';
                 probSpan.innerText = `${tok.prob}%`;
                 
                 labelRow.appendChild(labelSpan);
                 labelRow.appendChild(probSpan);
                 
                 const barTrack = document.createElement('div');
-                barTrack.className = 'w-full h-2 rounded-full bg-slate-200 border border-slate-300 overflow-hidden';
+                barTrack.className = 'w-full h-2.5 rounded-full bg-slate-200 border border-slate-300 overflow-hidden';
                 
                 const barFill = document.createElement('div');
                 barFill.className = `h-full rounded-full transition-all duration-1000 ${tok.isCritical ? 'bg-gradient-to-r from-red-600 to-red-400' : 'bg-gradient-to-r from-teal-600 to-teal-400'}`;
